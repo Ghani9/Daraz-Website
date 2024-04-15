@@ -1,0 +1,17 @@
+
+.category_card_container{
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  .category_card{
+    padding: 0rem 1rem;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .category_card_img{
+      width: 100px;
+    }
+    .category_card_name{}
+  }
+}

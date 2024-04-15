@@ -1,0 +1,67 @@
+
+.flashSale_container{
+  background-color: white;
+.top_section{
+  display: flex;
+  align-items: center;
+  // justify-content: space-between;
+  & > p{ 
+    color: $orange-shade-color;
+
+  }
+
+  .counter{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    p{}
+    .count_down{  
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      span{
+        color: $orange-shade-color;
+      }
+      .timer{
+        font-size: 20px;
+        background-color: $orange-shade-color;
+        color: white;
+        padding: 8px;
+        border-radius: 2px;
+      }
+      .hours{}
+      .minutes{}
+      .seconds{}
+    }
+  }
+
+  .shop_more_btn{
+    // flex: 1;
+    background-color: aqua;
+    justify-self: flex-end;
+    // align-self: flex-end;
+    p{
+
+    }
+  }
+}
+
+.flash_cards{
+  display: flex;
+  .card{
+    .flash_card_img{
+      width: 200px;
+    }
+    .flash_card_name{}
+    .flash_card_price{
+      color: $orange-text-color;
+    }
+    .flash_card_previousPrice{
+      opacity: 0.7;
+    }
+    .flash_card_off_percent{
+      
+    }
+  }
+}
+}

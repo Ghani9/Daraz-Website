@@ -1,0 +1,40 @@
+
+.search_bar{
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .daraz_img_container{
+  .daraz_img{
+    width: 120px;
+  }
+}
+
+  .searchbar_text{
+    flex: 1;
+    .input_searchbar{
+      width: 100%;
+      height: 40px;
+      border-radius: 10px;
+      border-style: none;
+      padding-left: 20px;
+      &:focus{
+        outline-style: none;
+      }
+    }
+  }
+
+  .account_container{
+    margin-left: 1rem;
+    display: flex;
+  }
+  .language{
+    margin-left: 1rem;
+  }
+
+  .cart{
+    margin-left: 1rem;
+  }
+
+}

@@ -1,0 +1,13 @@
+.navbar{
+  display: flex;
+  // background-color: aquamarine;
+  list-style: none;
+  gap: 2rem;
+  li{
+    transition: opacity 0.3s ease;
+  &:hover{
+    opacity: 0.8;
+    cursor: pointer;
+  }
+}
+}

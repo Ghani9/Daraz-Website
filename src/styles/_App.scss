@@ -1,0 +1,14 @@
+@import 'variables';
+
+.body{
+  background-color: $body-bg-color;
+}
+
+
+
+@import 'header';
+@import 'heroSection';
+@import 'services';
+@import 'flashSale';
+@import 'category_card_section';
+@import 'homePageProducts';
