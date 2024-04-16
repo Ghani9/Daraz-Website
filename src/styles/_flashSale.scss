@@ -1,13 +1,28 @@
 
+
+.flashSale-section-container{
+  
+  margin: 2rem 2rem;
+
+  h3{
+    margin-bottom: 0.5rem;
+    font-size: 1.7rem;
+    font-weight: 400;
+    opacity: 0.7;
+  }
+
 .flashSale_container{
   background-color: white;
+  display: flex;
+  flex-direction: column;
 .top_section{
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
-  // justify-content: space-between;
+  gap: 5rem;
   & > p{ 
     color: $orange-shade-color;
-
   }
 
   .counter{
@@ -36,32 +51,67 @@
   }
 
   .shop_more_btn{
-    // flex: 1;
-    background-color: aqua;
-    justify-self: flex-end;
-    // align-self: flex-end;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
     p{
-
+      color:$orange-shade-color;
+      padding: 0.5rem 0.5rem;
+      border: 1px solid $orange-bg-color;
     }
   }
 }
 
 .flash_cards{
+  padding: 0.75rem;
+  margin-top: 1rem;
   display: flex;
+  gap: 1rem;
   .card{
-    .flash_card_img{
-      width: 200px;
+    transition: box-shadow 0.2s ease;
+    &:hover{
+      box-shadow: 1px 0px 9px 1px black;
+      cursor: pointer;
     }
-    .flash_card_name{}
+    .card-img-container{
+      display: flex;
+      justify-content: center;
+      .flash_card_img{
+        height: 170px;
+      }
+    }
+    .card-info-and-price{
+      padding: 0 1rem;
+      padding-top: 1rem;
+      padding-bottom: 1.3rem;
+
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    .flash_card_name{
+      overflow: hidden;
+      text-overflow:ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2; /* number of lines to show */
+              line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
     .flash_card_price{
       color: $orange-text-color;
+      font-size: 1.3rem;
     }
+    .previous-price-and-off-percent{
+      font-size: 0.8rem;
     .flash_card_previousPrice{
       opacity: 0.7;
     }
     .flash_card_off_percent{
-      
+      margin-left: 0.4rem;
     }
   }
+  }
+  }
 }
+}
+
 }

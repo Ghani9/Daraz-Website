@@ -14,7 +14,6 @@ function HomePageProducts() {
 
       const response = await axios.get('https://dummyjson.com/products');
       const res = await response.data.products;
-      // console.log(response.data.products)
       setProducts(res);
     }catch(e){
       console.log('Error = ', e)
@@ -23,7 +22,8 @@ function HomePageProducts() {
 
   return (
     <>
-    <h3>Just For You</h3>
+    <div className='product-section-container'>
+    <h3 className='product-title'>Just For You</h3>
     <div className='product_container'>
       {
         products?.map((item, ind)=>{
@@ -33,6 +33,7 @@ function HomePageProducts() {
     </div>
     <div className='load_more_btn'>
      <span> Load More </span>
+    </div>
     </div>
     </>
   )

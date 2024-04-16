@@ -5,6 +5,7 @@ import { CategoryCards } from './Cards'
 function Categories() {
   return (
     <>
+    <div className='category-section-container'>
     <h3>Categories</h3>
     <div className='category_card_container'>
       {
@@ -12,6 +13,7 @@ function Categories() {
         <CategoryCards category={category} />
       )
       }
+    </div>
     </div>
     </>
   )

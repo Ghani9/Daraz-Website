@@ -5,8 +5,9 @@
   flex-direction: column;
   gap: 3rem;
   .service_section_one{
-    width: 90%;
+    // width: 90%;
     margin: 0 auto;
+    padding: 0.5rem 1rem;
     background-color: rgb(255, 245, 241);
     transition: background-color 0.2s ease;
     &:hover{
@@ -17,23 +18,55 @@
       justify-content: center;
       list-style: none;
       gap: 1rem;
+
+      .border-class{
+        border-right: 1px solid rgba(0,0,0,0.3);
+      }
       .li_item{
+        padding-right: 1rem;
         display: flex;
         align-items: center;
-        .service_img{}
-        .service_name{}
+        gap: 0.5rem;
+        &:hover{
+          cursor: pointer;
+        }
+        .service_img{
+          height: 20px;
+        }
+        .service_name{
+          font-size: 1rem;
+          text-wrap: nowrap;
+        }
       }
     }
   }
   .service_section_two{
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 3.2rem;
+    padding: 1rem 0;
+    margin: 0 2rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.8rem;
+
+    .border-class{
+      position: relative;
+      &::after{
+        content: '';
+        display: inline-block;
+        width: 1px;
+        height: 50px;
+        background-color: rgba(0,0,0,0.2);
+        position: absolute;
+        left:115px;
+      }
+    }
     .img_and_name{
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      gap: 0.7rem;
       transition: color 0.2s ease;
       &:hover{
         color: $orange-text-color;

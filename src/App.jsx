@@ -1,8 +1,7 @@
 
-// import './styles/App.css'
-
 import Categories from "./components/Categories"
 import FlashSale from "./components/FlashSale"
+import Footer from "./components/Footer"
 import Header from "./components/Header"
 import HeroSection from "./components/HeroSection"
 import HomePageProducts from "./components/HomePageProducts"
@@ -19,6 +18,7 @@ function App() {
     <FlashSale /> 
     <Categories />
     <HomePageProducts />
+    <Footer />
     </div>
     </>
   )

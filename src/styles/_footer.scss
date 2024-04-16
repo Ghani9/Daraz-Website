@@ -1,0 +1,116 @@
+
+.footer-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 1rem 2rem;
+  gap: 1rem;
+  .title{
+    color: $orange-shade-color;
+    font-weight: 200;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+  }
+  .list{
+    list-style: none;
+    line-height: 1.5rem;
+  }
+  .list-item{}
+  .anchor-tag{
+    text-decoration: none;
+    color: black;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+
+  .section-3{
+    .daraz-international{
+      .countries{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        .country{
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          
+          .country_img{
+            width: 35px;
+          }
+        }
+      }
+    }
+
+    .payment-method{
+      .payment-icon-section{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        .payment-icon{
+          width: 50px;
+        }
+      }
+
+    }
+
+    .verified-section{
+      .verified-img{
+        width: 100px;
+      }
+    }
+  }
+
+  .section-4{
+    .exclusive-deals-section{
+      .icons-container{
+        display: flex;
+        flex-direction: column;
+        gap: 1.4rem;
+      .first-part{
+        display: flex;
+        gap: 10px;
+        .qr-code{
+          .daraz-qr{
+            width: 120px;
+          }
+        }
+
+        .appStores-container{
+          display: grid ;
+          .appstore{
+            width: 100px;
+          }
+        }
+      }
+      .daraz-happy-shopping{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .daraz-img{
+          width: 50px;
+        }
+        .content{
+          .happy-shopping{
+            font-size: 1.7rem;
+            font-weight:bolder;
+            color: $orange-shade-color;
+          }
+          .download-app{
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+
+    }
+
+    .follow-us-section{
+      margin-top:4rem;
+      .socials-imgs-container{
+        display: flex;
+        gap: 10px;
+      }
+    }
+  }
+}

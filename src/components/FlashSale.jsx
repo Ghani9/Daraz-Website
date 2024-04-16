@@ -5,7 +5,8 @@ import { FlashCards } from './Cards'
 function FlashSale() {
   return (
     <>
-    <h2>Flash Sale</h2>
+    <div className='flashSale-section-container'>
+    <h3>Flash Sale</h3>
     <div className='flashSale_container'>
     <div className='top_section'>
       <p>On Sale Now</p>
@@ -18,9 +19,11 @@ function FlashSale() {
         </div>
       </div>
       <div className='shop_more_btn'>
-        <p>Shop More</p>
+        <p>SHOP MORE</p>
       </div>
     </div>
+
+    <hr/>
 
     <div className='flash_cards'>
       {
@@ -33,6 +36,7 @@ function FlashSale() {
         })
       }
       
+    </div>
     </div>
     </div>
     </>

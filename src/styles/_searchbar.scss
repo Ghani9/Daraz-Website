@@ -3,9 +3,11 @@
 
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-
+  justify-content: space-around;
+  padding: 0 1rem;
+  padding-bottom: 0.1rem;
   .daraz_img_container{
+    margin-right: 1rem;
   .daraz_img{
     width: 120px;
   }
@@ -26,15 +28,55 @@
   }
 
   .account_container{
-    margin-left: 1rem;
+    margin-left: 0.3rem;
+    margin-right: 0.8rem;
     display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0.6rem;
+    &:hover{
+      background-color: $orange-dark-color;
+      border-radius: 0.5rem;
+    }
+    .user-account{
+      display: flex;
+      gap: 1rem;
+
+      p{
+        font-weight: 700;
+        padding: 0.2rem 0.4rem;
+        &:hover{
+          background-color: $orange-shade-color;
+          border-radius: 0.5rem;
+          opacity: 0.8;
+          cursor: pointer;
+        }
+      }
+    }
   }
   .language{
-    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-right: 1rem;
+    padding: 0.5rem 0.3rem;
+    &:hover{
+      background-color: $orange-dark-color;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+    &>p{
+      font-weight: 700;
+    }
   }
 
   .cart{
-    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    &:hover{
+      background-color: $orange-dark-color;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
   }
 
 }
