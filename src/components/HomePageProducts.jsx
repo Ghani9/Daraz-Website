@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import axios from 'axios'
 import { ProductCard } from './Cards'
+import { DarazContext } from '../contextAPI/CustomeContext';
 
 function HomePageProducts() {
-  const [products, setProducts] = useState([])
+
+  const {products, setProducts} = useContext(DarazContext);
 
   useEffect(()=>{
     getProducts()

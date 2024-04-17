@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import ImageSlider from './productPageComponents/ImageSlider'
+import { DarazContext } from '../contextAPI/CustomeContext'
 
 export function FlashCards({item}) {
-
 
   return (
     <div className='card'>
@@ -30,9 +31,18 @@ export function CategoryCards({category}){
 }
 
 export function ProductCard({product}){
+
+  const {setProduct, setIsClick} = useContext(DarazContext);
+
+  function handleProductCard(){
+    setProduct(product)
+    setIsClick(true);
+
+  }
+
   return (
     <>
-    <div className='product_card'>
+    <div className='product_card' onClick={handleProductCard}>
       <img className='product_img' src={product.images[0]} />
       <div className='product_info'>
       <p className='product_description'>{product.description}</p>
@@ -41,6 +51,15 @@ export function ProductCard({product}){
       <p className='product_rating'>Ratings</p>
       </div>
     </div>
+    </>
+  )
+}
+
+export function ProductPageCard({product}){
+
+  return (
+    <>
+    <ImageSlider images={product.images} />
     </>
   )
 }

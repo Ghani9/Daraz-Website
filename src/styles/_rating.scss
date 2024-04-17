@@ -1,0 +1,19 @@
+.start-container{
+
+  display: flex;
+  
+
+  .starFill{
+    // color: aqua;
+    width: 50px;
+    &:hover{
+      cursor: pointer;
+    }
+    &::before{
+      content: '★';
+      display: inline-block;
+      color: blue;
+    }
+    
+  }
+}

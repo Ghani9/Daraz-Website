@@ -1,0 +1,97 @@
+
+.productInfo-and-buy_cart-Container{
+  grid-column: 2 / 5;
+  .product-title-and-ratings-container{
+    .product-title{
+      padding: 0 1rem;
+    }
+    .ratings-and-icons-container{
+      padding: 1rem 1rem;
+      .rating-and-brandName{
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        color: rgb(22, 132, 155);
+        .ratings{
+
+        }
+        .brand-name{}
+      }
+      .share-and-like-icons{}
+
+    }
+  }
+  .price-and-discount-container{
+    display: flex;
+    flex-direction: column;
+    // gap: 1rem;
+    .product-current-price{
+      margin-top: 1.3rem;
+      color: $orange-shade-color;
+    }
+    .previous-price-and-discount{
+      .product-prevoius-price{
+        color: gray;
+      }
+      .discount-percent{}
+    }
+  }
+
+  .quantity-and-buy_cart-container{
+    margin-top: 2rem;
+    .quantity-container{
+      display: flex;
+      align-items: center;
+      gap: 1.3rem;
+      &>p{
+        color: rgb(91, 91, 91);
+      }
+      .quantity-counter{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        .quantity-btn{
+          padding: 0.2rem 0.8rem;
+          background-color:rgb(209, 209, 209);;
+          border: none;
+          &:hover{
+            cursor: pointer;
+          }
+        }
+        .decrease-quantity-btn{}
+        .quantity-value{}
+        .increase-quantity-btn{}
+      }
+    }
+
+    .buy-and-addCart{
+      margin-top: 2rem;
+      display: flex;
+      gap: 1rem;
+      .btn{
+        border: none;
+        padding: 0.8rem 2rem;
+        color: white;
+        font-size: 1.3rem;
+        border-radius: 3px;
+        transition: background-color 0.4s ease;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+      .buy-btn{
+        background-color: rgb(38, 171, 212);
+        &:hover{
+          background-color:  rgb(22, 132, 155);
+        }
+      }
+      .add-to-cart-btn{
+        background-color: rgb(248, 97, 23);
+        &:hover{
+
+          background-color: rgb(208, 97, 30);
+        }
+      }
+    }
+  }
+}
