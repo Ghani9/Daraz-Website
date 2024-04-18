@@ -1,9 +1,22 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import userLogo from '../assets/icons/user.png'
+import { DarazContext } from '../contextAPI/CustomeContext'
 
 function Searchbar() {
 
+  const {setLoginPageFlag, loginPageFlag, setSignUpPageFlag, signUpPageFlag} = useContext(DarazContext)
 
+  function handleLogin(){
+    setLoginPageFlag(true)
+    setSignUpPageFlag(false)
+    // console.log(signUpPageFlag)
+  }
+
+  function handleSignUp(){
+    setSignUpPageFlag(true)
+    setLoginPageFlag(false)
+    // console.log(loginPageFlag)
+  }
 
   return (
     <>
@@ -18,10 +31,10 @@ function Searchbar() {
       <div className='account_container'>
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" stroke-linejoin="round" class="lucide lucide-circle-user-round"><path d="M18 20a6 6 0 0 0-12 0"/><circle cx="12" cy="10" r="4"/><circle cx="12" cy="12" r="10"/></svg>
         <div className='user-account'>
-        <p>
+        <p onClick={handleLogin}>
           Login
         </p>
-        <p>
+        <p onClick={handleSignUp}>
           Sign Up
         </p>
         </div>

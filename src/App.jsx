@@ -13,10 +13,13 @@ import ProductInfoAndPrice from "./components/productPageComponents/ProductInfoA
 import ProductDeliverySection from "./components/productPageComponents/ProductDeliverySection"
 import ProductPage from "./components/ProductPage"
 import RatingComponent from "./components/RatingComponent"
+import SignUpPage from "./components/loginAndsignupPage/SignUpPage"
+import LoginPage from "./components/loginAndsignupPage/LoginPage"
+import LoginInAndSignUpPages from "./components/LoginInAndSignUpPages"
 
 function App() {
 
-  const {isClick} = useContext(DarazContext);
+  const {isClick, loginPageFlag, signUpPageFlag} = useContext(DarazContext);
 
   return (
     <>
@@ -24,18 +27,24 @@ function App() {
     <Header />
 
    {
+    loginPageFlag || signUpPageFlag ? <LoginInAndSignUpPages /> :
     !isClick ? 
    <> <HeroSection />
     <Services />
     <FlashSale /> 
     <Categories />
-    <HomePageProducts /></> : ''
+    <HomePageProducts /></> : <ProductPage /> 
     }
-    { isClick ? 
+
+    {/* {console.log('LoginPage ',loginPageFlag)}
+    {console.log('SignUpPage ',signUpPageFlag)} */}
+
+
+    {/* { isClick ? 
     <>
     <ProductPage />
     </>
-     : <h1>hey</h1>}
+     :''} */}
 
     <Footer />
     </div>

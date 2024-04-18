@@ -799,4 +799,254 @@
   content: "★";
   display: inline-block;
   color: blue;
+}
+
+.sign-up-page-container {
+  margin: 2rem 13rem;
+}
+.sign-up-page-container .anchor-text {
+  text-decoration: none;
+  color: rgb(4, 156, 185);
+}
+.sign-up-page-container .anchor-text:hover {
+  cursor: pointer;
+}
+.sign-up-page-container .top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+.sign-up-page-container .top-section .create-account-text {
+  font-size: 1.8rem;
+}
+.sign-up-page-container .top-section .already-member-text {
+  font-size: 0.9rem;
+  color: rgb(117, 117, 117);
+}
+.sign-up-page-container .signUp-form-container {
+  background-color: white;
+  padding: 2rem;
+}
+.sign-up-page-container .signUp-form-container .form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.sign-up-page-container .signUp-form-container .form .label-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.sign-up-page-container .signUp-form-container .form .form-label {
+  color: rgb(66, 66, 66);
+  font-size: 0.9rem;
+}
+.sign-up-page-container .signUp-form-container .form .input-field {
+  width: 100%;
+  padding: 0.5rem;
+  outline: none;
+}
+.sign-up-page-container .signUp-form-container .form .input-field[palcehoder] {
+  color: rgb(169, 169, 169);
+}
+.sign-up-page-container .signUp-form-container .form .first-section-of-sign-up-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.sign-up-page-container .signUp-form-container .form .first-section-of-sign-up-form .dob-and-gender-container {
+  display: flex;
+  gap: 0.5rem;
+}
+.sign-up-page-container .signUp-form-container .form .first-section-of-sign-up-form .dob-and-gender-container .selector {
+  padding: 0.3rem;
+}
+.sign-up-page-container .signUp-form-container .form .first-section-of-sign-up-form .dob-and-gender-container .selector .options {
+  padding: 1rem;
+}
+.sign-up-page-container .signUp-form-container .form .second-section-of-sign-up {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.sign-up-page-container .signUp-form-container .form .second-section-of-sign-up .checkbox-signup-and-terms-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.sign-up-page-container .signUp-form-container .form .second-section-of-sign-up .checkbox-signup-and-terms-container .checbox-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.sign-up-page-container .signUp-form-container .form .second-section-of-sign-up .checkbox-signup-and-terms-container .checbox-container .checkbox {
+  width: 1rem;
+  accent-color: rgb(226, 83, 0);
+}
+.sign-up-page-container .signUp-form-container .form .second-section-of-sign-up .checkbox-signup-and-terms-container .checbox-container .checkbox:hover {
+  cursor: pointer;
+}
+.sign-up-page-container .signUp-form-container .form .second-section-of-sign-up .checkbox-signup-and-terms-container .checbox-container > p {
+  font-size: 0.85rem;
+  color: rgb(117, 117, 117);
+}
+.sign-up-page-container .signUp-form-container .form .second-section-of-sign-up .checkbox-signup-and-terms-container .submitBtn {
+  border: none;
+  padding: 1rem 0;
+  background-color: rgb(245, 114, 36);
+  color: white;
+  transition: background-color 0.5s ease;
+  border-radius: 3px;
+}
+.sign-up-page-container .signUp-form-container .form .second-section-of-sign-up .checkbox-signup-and-terms-container .submitBtn:hover {
+  background-color: rgb(226, 83, 0);
+  cursor: pointer;
+}
+.sign-up-page-container .signUp-form-container .form .second-section-of-sign-up .checkbox-signup-and-terms-container > p {
+  font-size: 0.8rem;
+  color: rgb(117, 117, 117);
+}
+.sign-up-page-container .signUp-form-container .form .second-section-of-sign-up .fb-google-btns-container {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+.sign-up-page-container .signUp-form-container .form .second-section-of-sign-up .fb-google-btns-container > p {
+  font-size: 0.9rem;
+  color: rgb(117, 117, 117);
+}
+.sign-up-page-container .signUp-form-container .form .second-section-of-sign-up .fb-google-btns-container .btns-container {
+  display: flex;
+  gap: 0.5rem;
+}
+.sign-up-page-container .signUp-form-container .form .second-section-of-sign-up .fb-google-btns-container .btns-container .btn {
+  border: none;
+  padding: 0.4rem;
+  width: 100%;
+  color: white;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 3px;
+}
+.sign-up-page-container .signUp-form-container .form .second-section-of-sign-up .fb-google-btns-container .btns-container .btn:hover {
+  cursor: pointer;
+}
+.sign-up-page-container .signUp-form-container .form .second-section-of-sign-up .fb-google-btns-container .btns-container .btn .btn-icon {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.sign-up-page-container .signUp-form-container .form .second-section-of-sign-up .fb-google-btns-container .btns-container .fb-btn {
+  background-color: rgb(59, 89, 152);
+}
+.sign-up-page-container .signUp-form-container .form .second-section-of-sign-up .fb-google-btns-container .btns-container .google-btn {
+  background-color: rgb(211, 72, 54);
+}
+
+.loginPage-container {
+  margin: 2rem 13rem;
+}
+.loginPage-container .anchor-link {
+  text-decoration: none;
+  color: rgb(4, 156, 185);
+}
+.loginPage-container .top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+.loginPage-container .top-section .welcome-text {
+  font-size: 1.5rem;
+}
+.loginPage-container .top-section > p {
+  font-size: 0.9rem;
+  color: rgb(117, 117, 117);
+}
+.loginPage-container .top-section > p > span:hover {
+  cursor: pointer;
+}
+.loginPage-container .form-container {
+  background-color: white;
+  padding: 2rem;
+}
+.loginPage-container .form-container .login-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.loginPage-container .form-container .login-form .label-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.loginPage-container .form-container .login-form .label-input .input-field {
+  width: 100%;
+  padding: 0.5rem;
+  outline: none;
+}
+.loginPage-container .form-container .login-form .label-input .input-field[palcehoder] {
+  color: rgb(169, 169, 169);
+}
+.loginPage-container .form-container .login-form .user-mail-and-password-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.loginPage-container .form-container .login-form .user-mail-and-password-section > p {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.86rem;
+}
+.loginPage-container .form-container .login-form .loginBtn-and-fbgoogleBtn {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.loginPage-container .form-container .login-form .loginBtn-and-fbgoogleBtn .loginbtn {
+  width: 100%;
+  border: none;
+  padding: 1rem 0;
+  background-color: rgb(245, 114, 36);
+  color: white;
+  transition: background-color 0.5s ease;
+  border-radius: 3px;
+}
+.loginPage-container .form-container .login-form .loginBtn-and-fbgoogleBtn .loginbtn:hover {
+  background-color: rgb(226, 83, 0);
+  cursor: pointer;
+}
+.loginPage-container .form-container .login-form .loginBtn-and-fbgoogleBtn > p {
+  font-size: 0.8rem;
+  color: rgb(117, 117, 117);
+}
+.loginPage-container .form-container .login-form .loginBtn-and-fbgoogleBtn .btn {
+  border: none;
+  padding: 0.6rem;
+  width: 100%;
+  color: white;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 3px;
+}
+.loginPage-container .form-container .login-form .loginBtn-and-fbgoogleBtn .btn:hover {
+  cursor: pointer;
+}
+.loginPage-container .form-container .login-form .loginBtn-and-fbgoogleBtn .btn .btn-icon {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.loginPage-container .form-container .login-form .loginBtn-and-fbgoogleBtn .fb-btn {
+  background-color: rgb(59, 89, 152);
+}
+.loginPage-container .form-container .login-form .loginBtn-and-fbgoogleBtn .google-btn {
+  background-color: rgb(211, 72, 54);
 }/*# sourceMappingURL=index.css.map */

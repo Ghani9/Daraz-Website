@@ -24,7 +24,9 @@ function HomePageProducts() {
 
   return (
     <>
-    <div className='product-section-container'>
+    {
+      products == [] ? '' :
+      <div className='product-section-container'>
     <h3 className='product-title'>Just For You</h3>
     <div className='product_container'>
       {
@@ -33,10 +35,11 @@ function HomePageProducts() {
         })
       }
     </div>
-    <div className='load_more_btn'>
+    <div className={`load_more_btn`}>
      <span> Load More </span>
+    </div> 
     </div>
-    </div>
+  }
     </>
   )
 }
