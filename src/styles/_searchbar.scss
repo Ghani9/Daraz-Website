@@ -72,10 +72,19 @@
 
   .cart{
     padding: 0.5rem 1rem;
+    position: relative;
     &:hover{
       background-color: $orange-dark-color;
       border-radius: 0.5rem;
       cursor: pointer;
+    }
+    .cartNumber{
+      position: absolute;
+      left: 53%;
+      top: 45%;
+      transform: translate(-50%, -50%);
+      font-size: 0.8rem;
+
     }
   }
 

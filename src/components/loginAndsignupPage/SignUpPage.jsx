@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { dateOfBorth, years } from '../../assets/dateOfBirthData'
+import { dateOfBirth, years } from '../../assets/dateOfBirthData'
 import { DarazContext } from '../../contextAPI/CustomeContext';
 import { checkInputNumbers } from '../../logicComponent/checkInputLogic';
 
@@ -7,23 +7,42 @@ function SignUpPage() {
 
   const {setSignUpPageFlag, setLoginPageFlag} = useContext(DarazContext)
 
-  const [month, setMonth] = useState('');
-  const [day, setDay] = useState(0);
-  const [year, setYear] = useState(0);
-  const [gender, setGender] = useState('');
+  const [birthDate, setBirthDate] = useState({
+    day : 0,
+    month : '',
+    year : 0
+  })
   const [userData, setUserData] = useState({
     phoneNumber : '',
     fullName : '',
+    gender : '',
+    verificationCode : '',
     password : ''
   })
 
+  const [err, setErr] = useState({
+    password : '',
+    fullName : '',
+    phoneNumber : '',
+    birthDate : '',
+    gender : '' ,
+    verificationCode : ''
+  });
+
   useEffect(()=>{
-    setMonth('');
-    setDay(0);
+    setBirthDate({
+      day : 0,
+      month : '',
+      year : 0})
+      setUserData({
+        phoneNumber : '',
+        fullName : '',
+        password : '',
+        gender : '',
+        verificationCode : ''
+      })
   },[])
 
-  
-  
   function handleBacktoHome(){
     setSignUpPageFlag(false)
   }
@@ -32,32 +51,45 @@ function SignUpPage() {
     setSignUpPageFlag(false)
     setLoginPageFlag(true)
   }
-  function handleMonth(e){
-    setMonth(e.target.value);
-
-  }
-  function handleDay(e){
-    setDay(e.target.value);
-  }
-
-  function handleYear(e){
-    setYear(e.target.value)
-  }
-
-  function handleGender(e){
-    console.log(e.target.value)
-    setGender(e.target.value)
+  function handleBirthDate(e){
+    setBirthDate({...birthDate, [e.target.name] : e.target.value});
   }
 
   function handleInput(e){
-    if(checkInputNumbers(e.target.value)){
-
-    }
+    
+    setUserData({...userData, [e.target.name] : e.target.value})
+    console.log('handleInput invoked')
+    // if(checkInputNumbers(e.target.value)){
+    //   console.log('correct Input')
+    // }
   }
 
+  function setErrorsFunction(key){
+    setErr({...err, [key]:'Please Enter the field'});
+  }
 
+  function checkInput(){
+    const userDataKeys = Object.keys(userData)
+    const birthDateKeys = Object.keys(birthDate)
+    userDataKeys.map((key, ind)=>{
+      if(userData[key] === ''){
+       setErrorsFunction(key)
+        console.log('Hekkooj = ', key)
+      }else{
+        // setErr({...err, [key]:''})
+      }
+    })
+    console.log('UserData = ', userDataKeys)
+    // console.log('BirthData = ', birthDateKeys)
+  }
 
-  function handleSubmit(){}
+  function handleSubmit(e){
+    e.preventDefault();
+    // if(userData){}?
+    checkInput()
+    console.log(err)
+
+  }
 
   return (
     <>
@@ -73,38 +105,38 @@ function SignUpPage() {
         <div className='label-input'>
         <label className='form-label'>Phone Number*</label>
         <input placeholder='Please enter your phone number' name='phoneNumber' id='phoneNumber' onChange={handleInput} type='text' className='input-field' />
-        <span></span>
+        <span> hey {err.phoneNumber}</span>
         </div>
         <div className='label-input'>
         <label className='form-label'>Verfication Code from whatsApp*</label>
-        <input placeholder='Verification Code' name='verificationCode' id='verificationCode' type='text' className='input-field' /></div>
+        <input onChange={handleInput} placeholder='Verification Code' name='verificationCode' id='verificationCode' type='text' className='input-field' /></div>
         <div className='label-input'>
         <label className='form-label'>Password*</label>
-        <input placeholder='Minimum 6 characters with a number and a letter' name='passowrd' id='password' type='text' className='input-field' /></div>
+        <input onChange={handleInput} placeholder='Minimum 6 characters with a number and a letter' name='password' id='password' type='text' className='input-field' /></div>
 
         <div className='dob-and-gender-container'>
         <div className='dob-container label-input'>
         <label className='form-label'>Date of Birth</label>
         <div>
-          <select className='birth-month-selector selector' onChange={handleMonth} >
+          <select className='birth-month-selector selector' name='month' onChange={handleBirthDate} >
             <option selected>Month</option>
             {
-              dateOfBorth.map((month,ind)=>
+              dateOfBirth.map((month,ind)=>
             <option className='month-name options' value={month.month}>{month.month}</option>
             )
             }
           </select>
-          <select className='birth-day-selector selector' onChange={handleDay}>
+          <select className='birth-day-selector selector' name='day' onChange={handleBirthDate}>
             <option>Day</option>
           {
-              dateOfBorth.map((selectedMonth,ind)=>
-                month === selectedMonth.month ? selectedMonth.days.map((day, ind)=>
+              dateOfBirth.map((selectedMonth,ind)=>
+                birthDate.month === selectedMonth.month ? selectedMonth.days.map((day, ind)=>
                 <option className='day-of-month options' value={day}>{day}</option>
               ) : ''
             )
             }
           </select>
-          <select className='birth-year-selector selector' onChange={handleYear}>
+          <select className='birth-year-selector selector' name='year' onChange={handleBirthDate}>
             <option>Year</option>
             {
               years.map((yr,ind)=> 
@@ -116,9 +148,10 @@ function SignUpPage() {
           <div className='gender-container label-input'>
           <label htmlFor="" className='form-label'>Gender</label>
           <div className='label-input'>
-            <select className='gender-selector selector' onChange={handleGender}>
-              <option className='gender-type options' value='Male'>Male</option>
-              <option className='gender-type options' value='Female'>Female</option>
+            <select className='gender-selector selector' name='gender' onChange={handleInput}>
+              <option >Gender</option>
+              <option className='gender-type options' value='male'>Male</option>
+              <option className='gender-type options' value='female'>Female</option>
             </select>
             </div>
           </div>
@@ -128,7 +161,7 @@ function SignUpPage() {
       <div className='second-section-of-sign-up'>
         <div className='label-input'>
           <label className='full-name-label form-label'>Full Name*</label>
-          <input placeholder='Enter your first and last name' name='fullName' id='fullName' className='input-field' type='text' />
+          <input onChange={handleInput} placeholder='Enter your first and last name' name='fullName' id='fullName' className='input-field' type='text' />
         </div>
         <div className='checkbox-signup-and-terms-container'>
           <div className='checbox-container'>

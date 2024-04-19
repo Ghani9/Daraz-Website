@@ -10,9 +10,14 @@ function CustomeContext({children}) {
   const [isClick, setIsClick] = useState(false);
   const [loginPageFlag, setLoginPageFlag] = useState(false);
   const [signUpPageFlag, setSignUpPageFlag] = useState(false);
+  const [cartProduct, setCartProduct] = useState([]);
+  const [cartFlag, setCartFlag] = useState(false)
+  const [selectedProductsInCart, setSelectedProductInCart] = useState([])
+  const [totalProductPrice, setTotalProductPice] = useState(0)
 
   return (
-    <DarazContext.Provider value={{loginPageFlag, setLoginPageFlag, signUpPageFlag, setSignUpPageFlag, product, products, setProducts, setProduct, isClick, setIsClick}} >
+    <DarazContext.Provider value={{loginPageFlag, setLoginPageFlag, signUpPageFlag, setSignUpPageFlag, product, products, setProducts,selectedProductsInCart, setSelectedProductInCart, setProduct, isClick, setIsClick, cartProduct, setCartProduct,
+      cartFlag, setCartFlag}} >
       {children}
     </DarazContext.Provider>
   )

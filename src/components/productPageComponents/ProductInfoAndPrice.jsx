@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { DarazContext } from '../../contextAPI/CustomeContext'
 
 function ProductInfoAndPrice() {
-  const {product} = useContext(DarazContext)
+  const {product, cartProduct, setCartProduct} = useContext(DarazContext)
   const [quantityCounter, setQuantityCounter] = useState(0)
 
   useEffect(()=>{
@@ -24,8 +24,13 @@ function ProductInfoAndPrice() {
       e.target.disabled
     }
     setQuantityCounter(quantityCounter >= product.stock ? product.stock : quantityCounter+1)
-
   }
+
+  function handleAddToCart(){
+    if(!cartProduct.includes(product))
+    setCartProduct([...cartProduct, product])
+  }
+
   return (
     <>
     <div className='productInfo-and-buy_cart-Container'>
@@ -59,7 +64,7 @@ function ProductInfoAndPrice() {
         </div>
         <div className='buy-and-addCart'>
           <button className='btn buy-btn'>Buy Now</button>
-          <button className='btn add-to-cart-btn'>Add to Cart</button>
+          <button className='btn add-to-cart-btn' onClick={handleAddToCart}>Add to Cart</button>
         </div>
       </div>
     </div>

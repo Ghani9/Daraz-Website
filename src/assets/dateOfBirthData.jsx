@@ -18,7 +18,7 @@ function returnYears(){
 
 export const years = returnYears();
 
-export const dateOfBorth = [
+export const dateOfBirth = [
   {
     id : 1,
     month: 'January',

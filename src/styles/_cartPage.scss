@@ -1,0 +1,171 @@
+
+.cartPage-container{
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 2rem ;
+  .selected-order-container{
+    flex: 2;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .checkbox{}
+    .numberOfItemsSelected-container{
+      padding: 1rem;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      .top-section-text{
+        color: rgb(117, 117, 117);
+        font-size: 0.8rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &>span{
+          display: flex;
+          align-items: center;
+          gap: 0.2rem;
+          &:hover{
+            cursor: pointer;
+          }
+        }
+      }
+
+    }
+
+    .listSelectedItemsCard-container{
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      padding: 2rem 1rem;
+     .item-img-info{
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      .product-image{
+        width: 70px;
+        height: 70px;
+        margin-right: 0.5rem;
+      }
+      .productName-info{
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        .productName{
+          font-size: 1.2rem;
+        }
+        .productType{
+          font-size: 0.8rem;
+          color: gray;
+        }
+        .little-tags{
+          display: flex;
+          gap: 0.5rem;
+          &>p{
+            border: 1px solid gray;
+            padding: 1px;
+            color: rgb(255, 118, 68);
+            font-size: 0.45rem;
+            font-weight: 700;
+            letter-spacing: 0.2px;
+          }
+        }
+      }
+     } 
+     .price-and-discount-container{
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      .price{
+        color: $orange-shade-color;
+        font-size: 1.5rem;
+      }
+      .discount{
+        font-size: 0.9rem;
+      }
+      .like-and-deletefromCart-icons{
+        display: flex;
+        gap: 0.3rem;
+        color: gray;
+        .icon{
+          &:hover{
+            cursor: pointer;
+          }
+        }
+      }
+     }
+
+     .counter-container{
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      .counterBtn{
+        border: none;
+        padding: 0.4rem 0.8rem;
+        &:hover{
+          cursor: pointer;
+        }
+        .counter{
+
+        }
+      }
+     }
+    }
+  }
+
+  .order-summary-container{
+    flex:1;
+    padding: 1rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .orderSummary-title{
+      font-size: 1.3rem;
+    }
+    .subtotal-div{
+      display: flex;
+      justify-content: space-between;
+      .summary-text{
+        color: gray;
+      }
+      .price-text{}
+      .total-text{
+      }
+      .total-price{}
+    }
+
+    .voucher-class{
+      display: flex;
+      gap: 0.4rem;
+      .voucher-text-area{
+        height: 2rem;
+        outline: none;
+        padding-left:0.4rem ;
+        flex: 1;
+      }
+      .voucherBtn{
+        
+        background-color: rgb(37, 165, 216);
+        color: white;
+        border: none;
+        padding: 0 2rem;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+
+    .checkout-btn{
+      background-color: rgb(245, 114, 36);
+      color: white;
+      border: none;
+      padding: 1rem 1rem;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+}

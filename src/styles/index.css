@@ -105,11 +105,19 @@
 }
 .search_bar .cart {
   padding: 0.5rem 1rem;
+  position: relative;
 }
 .search_bar .cart:hover {
   background-color: rgb(203, 81, 0);
   border-radius: 0.5rem;
   cursor: pointer;
+}
+.search_bar .cart .cartNumber {
+  position: absolute;
+  left: 53%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  font-size: 0.8rem;
 }
 
 .hero_section_container {
@@ -1049,4 +1057,157 @@
 }
 .loginPage-container .form-container .login-form .loginBtn-and-fbgoogleBtn .google-btn {
   background-color: rgb(211, 72, 54);
+}
+
+.cartPage-container {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 2rem;
+}
+.cartPage-container .selected-order-container {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.cartPage-container .selected-order-container .numberOfItemsSelected-container {
+  padding: 1rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.cartPage-container .selected-order-container .numberOfItemsSelected-container .top-section-text {
+  color: rgb(117, 117, 117);
+  font-size: 0.8rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cartPage-container .selected-order-container .numberOfItemsSelected-container .top-section-text > span {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+.cartPage-container .selected-order-container .numberOfItemsSelected-container .top-section-text > span:hover {
+  cursor: pointer;
+}
+.cartPage-container .selected-order-container .listSelectedItemsCard-container {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+}
+.cartPage-container .selected-order-container .listSelectedItemsCard-container .item-img-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.cartPage-container .selected-order-container .listSelectedItemsCard-container .item-img-info .product-image {
+  width: 70px;
+  height: 70px;
+  margin-right: 0.5rem;
+}
+.cartPage-container .selected-order-container .listSelectedItemsCard-container .item-img-info .productName-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.cartPage-container .selected-order-container .listSelectedItemsCard-container .item-img-info .productName-info .productName {
+  font-size: 1.2rem;
+}
+.cartPage-container .selected-order-container .listSelectedItemsCard-container .item-img-info .productName-info .productType {
+  font-size: 0.8rem;
+  color: gray;
+}
+.cartPage-container .selected-order-container .listSelectedItemsCard-container .item-img-info .productName-info .little-tags {
+  display: flex;
+  gap: 0.5rem;
+}
+.cartPage-container .selected-order-container .listSelectedItemsCard-container .item-img-info .productName-info .little-tags > p {
+  border: 1px solid gray;
+  padding: 1px;
+  color: rgb(255, 118, 68);
+  font-size: 0.45rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+.cartPage-container .selected-order-container .listSelectedItemsCard-container .price-and-discount-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.cartPage-container .selected-order-container .listSelectedItemsCard-container .price-and-discount-container .price {
+  color: rgb(255, 104, 1);
+  font-size: 1.5rem;
+}
+.cartPage-container .selected-order-container .listSelectedItemsCard-container .price-and-discount-container .discount {
+  font-size: 0.9rem;
+}
+.cartPage-container .selected-order-container .listSelectedItemsCard-container .price-and-discount-container .like-and-deletefromCart-icons {
+  display: flex;
+  gap: 0.3rem;
+  color: gray;
+}
+.cartPage-container .selected-order-container .listSelectedItemsCard-container .price-and-discount-container .like-and-deletefromCart-icons .icon:hover {
+  cursor: pointer;
+}
+.cartPage-container .selected-order-container .listSelectedItemsCard-container .counter-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.cartPage-container .selected-order-container .listSelectedItemsCard-container .counter-container .counterBtn {
+  border: none;
+  padding: 0.4rem 0.8rem;
+}
+.cartPage-container .selected-order-container .listSelectedItemsCard-container .counter-container .counterBtn:hover {
+  cursor: pointer;
+}
+.cartPage-container .order-summary-container {
+  flex: 1;
+  padding: 1rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.cartPage-container .order-summary-container .orderSummary-title {
+  font-size: 1.3rem;
+}
+.cartPage-container .order-summary-container .subtotal-div {
+  display: flex;
+  justify-content: space-between;
+}
+.cartPage-container .order-summary-container .subtotal-div .summary-text {
+  color: gray;
+}
+.cartPage-container .order-summary-container .voucher-class {
+  display: flex;
+  gap: 0.4rem;
+}
+.cartPage-container .order-summary-container .voucher-class .voucher-text-area {
+  height: 2rem;
+  outline: none;
+  padding-left: 0.4rem;
+  flex: 1;
+}
+.cartPage-container .order-summary-container .voucher-class .voucherBtn {
+  background-color: rgb(37, 165, 216);
+  color: white;
+  border: none;
+  padding: 0 2rem;
+}
+.cartPage-container .order-summary-container .voucher-class .voucherBtn:hover {
+  cursor: pointer;
+}
+.cartPage-container .order-summary-container .checkout-btn {
+  background-color: rgb(245, 114, 36);
+  color: white;
+  border: none;
+  padding: 1rem 1rem;
+}
+.cartPage-container .order-summary-container .checkout-btn:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=index.css.map */

@@ -16,10 +16,11 @@ import RatingComponent from "./components/RatingComponent"
 import SignUpPage from "./components/loginAndsignupPage/SignUpPage"
 import LoginPage from "./components/loginAndsignupPage/LoginPage"
 import LoginInAndSignUpPages from "./components/LoginInAndSignUpPages"
+import CartPage from "./components/CartPage"
 
 function App() {
 
-  const {isClick, loginPageFlag, signUpPageFlag} = useContext(DarazContext);
+  const {isClick, loginPageFlag, signUpPageFlag, cartFlag, setCartFlag} = useContext(DarazContext);
 
   return (
     <>
@@ -27,6 +28,7 @@ function App() {
     <Header />
 
    {
+    cartFlag ? <CartPage /> :
     loginPageFlag || signUpPageFlag ? <LoginInAndSignUpPages /> :
     !isClick ? 
    <> <HeroSection />
@@ -36,15 +38,7 @@ function App() {
     <HomePageProducts /></> : <ProductPage /> 
     }
 
-    {/* {console.log('LoginPage ',loginPageFlag)}
-    {console.log('SignUpPage ',signUpPageFlag)} */}
-
-
-    {/* { isClick ? 
-    <>
-    <ProductPage />
-    </>
-     :''} */}
+    {/* <CartPage /> */}
 
     <Footer />
     </div>
