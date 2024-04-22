@@ -1,8 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { DarazContext } from '../../contextAPI/CustomeContext'
 
+//Product Page 
 function ProductInfoAndPrice() {
-  const {product, cartProduct, setCartProduct} = useContext(DarazContext)
+  const {product, cartProduct, checkBoxState, setCheckBoxState, setCartProduct} = useContext(DarazContext)
   const [quantityCounter, setQuantityCounter] = useState(0)
 
   useEffect(()=>{
@@ -27,8 +28,9 @@ function ProductInfoAndPrice() {
   }
 
   function handleAddToCart(){
-    if(!cartProduct.includes(product))
+    if(!cartProduct.includes(product)){
     setCartProduct([...cartProduct, product])
+  }
   }
 
   return (

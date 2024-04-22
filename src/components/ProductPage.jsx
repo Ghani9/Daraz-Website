@@ -6,7 +6,6 @@ import { DarazContext } from '../contextAPI/CustomeContext'
 
 function ProductPage() {
   const {isClick, setIsClick} = useContext(DarazContext)
-
   function handleBackBtn(){
     setIsClick(false)
   }

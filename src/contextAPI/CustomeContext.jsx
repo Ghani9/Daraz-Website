@@ -14,9 +14,10 @@ function CustomeContext({children}) {
   const [cartFlag, setCartFlag] = useState(false)
   const [selectedProductsInCart, setSelectedProductInCart] = useState([])
   const [totalProductPrice, setTotalProductPice] = useState(0)
+  const [checkBoxState, setCheckBoxState] = useState([])
 
   return (
-    <DarazContext.Provider value={{loginPageFlag, setLoginPageFlag, signUpPageFlag, setSignUpPageFlag, product, products, setProducts,selectedProductsInCart, setSelectedProductInCart, setProduct, isClick, setIsClick, cartProduct, setCartProduct,
+    <DarazContext.Provider value={{loginPageFlag, setLoginPageFlag, signUpPageFlag, setSignUpPageFlag, product, products, setProducts,selectedProductsInCart, setSelectedProductInCart, setProduct, isClick, setIsClick, cartProduct, setCartProduct, checkBoxState, setCheckBoxState,
       cartFlag, setCartFlag}} >
       {children}
     </DarazContext.Provider>

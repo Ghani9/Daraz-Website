@@ -16,7 +16,7 @@ import RatingComponent from "./components/RatingComponent"
 import SignUpPage from "./components/loginAndsignupPage/SignUpPage"
 import LoginPage from "./components/loginAndsignupPage/LoginPage"
 import LoginInAndSignUpPages from "./components/LoginInAndSignUpPages"
-import CartPage from "./components/CartPage"
+import CartPage from "./components/cartPageComponent/CartPage"
 
 function App() {
 
